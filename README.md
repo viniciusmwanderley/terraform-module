@@ -7,7 +7,7 @@ Esse modulo :
 
 Para usar o make você precisa:
 
- - [terraform](https://www.terraform.io/) >= 0.14
+ - [terraform](https://www.terraform.io/) >= 0.14.0
  - [make](https://www.gnu.org/software/make/)
 
 ## Usando
