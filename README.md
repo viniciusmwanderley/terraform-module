@@ -46,6 +46,9 @@ Crie seu arquivo **.env** a partir do exemplo **.env.example**
 | **Nome** | **Descrição** | **Tipo** | **Default** | **Requerido** |
 |------|-------------|:----:|:-----:|:-----:|
 | **name** |  Nome do projeto | string | n/a | sim |
+| **enable_sg** |  Habilitar feature de criar security group | bool | false | não |
+| **ingress_ports** |  Lista de portas para liberar | list(number) | [] | não |
+
 
 # ToDo
 
