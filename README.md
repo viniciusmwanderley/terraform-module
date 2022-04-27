@@ -49,6 +49,7 @@ Crie seu arquivo **.env** a partir do exemplo **.env.example**
 | **enable_sg** |  Habilitar feature de criar security group | bool | false | não |
 | **ingress_ports** |  Lista de portas para liberar | list(number) | [] | não |
 
+
 # ToDo
 
 - [ ] Colocar suporte a security group
