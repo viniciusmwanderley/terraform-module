@@ -7,7 +7,7 @@ Esse modulo :
 
 Para usar o make você precisa:
 
- - [terraform](https://www.terraform.io/) >= 0.12
+ - [terraform](https://www.terraform.io/) >= 0.14
  - [make](https://www.gnu.org/software/make/)
 
 ## Usando
@@ -17,25 +17,24 @@ Crie um arquivo **terrafile.tf** na raiz do seu projeto, você pode seguir esse 
 ```terraform
 provider "aws" {
   region  = "us-east-1"
-  version = "~> 2.0"
 }
 
 terraform {
   backend "s3" {
-    # Lembre de trocar o bucket para o seu
-    bucket = "iaasweek-tfstates-terraform"
+    bucket = "wanderley-tfstates-terraform"
     key    = "terraform-test.tfstate"
     region = "us-east-1"
   }
 }
 
-module "produto" {
-  source                  = "git@github.com:gomex/terraform-module?ref=v0.1"
-  name                    = "produto"
+module "product" {
+
+  source                  = "git::https://github.com/viniciusmwanderley/terraform-module.git"
+  name                    = "product"
 }
 
 output "ip_address" {
-  value = module.produto.ip_address
+  value = module.product.ip_address
 }
 ```
 
